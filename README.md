@@ -4,16 +4,23 @@ The Settle SDK abstracts using the price feed and settle API by wrapping authent
 
 ## How it works
 Instead of authenticating and running requests yourself, use Settle.run and pass in 3 parameters:
-<br />
+
 Settle.run(< API >, < Endpoint >, < Params >)
 
 ## Important - Authentication
 You need to register an app in settle in order to use the API. Head over to https://settle.finance/app/developer-tools and join our developer program.
-<br />
+
 ![Alt text](/Images/app-permission.png?raw=true)
-<br />
+
 Set an app name and grab the automatically generated API keys. Update your .env folder so that SETTLE_API_KEY and SETTLE_API_SECRET reflect your keys.
-<br /><br />
+
+```
+SETTLE_API_KEY    = "API KEY HERE"
+SETTLE_API_SECRET = "API SECRET HERE"
+SETTLE_JSAPI      = "https://jsapi.settle.finance"
+SETTLE_DBAPI      = "https://dbapi.settle.finance"
+```
+
 You can now access the Settle SDK!
 
 ### Testing user specific endpoints
