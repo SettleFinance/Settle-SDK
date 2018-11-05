@@ -30,11 +30,11 @@ In your developer tools, https://settle.finance/app/developer-tools, click the i
 
 ## Examples
 
-### Return ticker information about Bitcoin
+#### Return ticker information about Bitcoin
 Settle.run('https://dbapi.settle.finance', '/api/public/ticker', {id: '1'})
 
-### Return a users holdings with a list of trades for each asset
+#### Return a users holdings with a list of trades for each asset
 Settle.run('https://jsapi.settle.finance', '/api/public/PortfolioTracker/HoldingsWithTrades', { user_id })
 
-### Return a list of users who installed my app
+#### Return a list of users who installed my app
 Settle.run('https://jsapi.settle.finance', '/api/app/Users', {})
