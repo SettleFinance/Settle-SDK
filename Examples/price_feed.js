@@ -1,5 +1,5 @@
 const Settle = require('../settle')
-const Tester = require('./tester')
+
 /**
 
 Generate a public and private api key at https://settle.finance/os
@@ -13,19 +13,19 @@ If a user didnt install your app, the request will not work.
 /** Price Feed **/
 
 // Get a ticker, bitcoin
-Settle(process.env.SETTLE_DBAPI, '/api/public/ticker', {id: '1'})
+Settle.run(process.env.SETTLE_DBAPI, '/api/public/ticker', {id: '1'})
 .then((result) => {
-  Tester(result)
+  console.log('Ticker')
 })
 
 // Get price history, bitcoin
-Settle(process.env.SETTLE_DBAPI, '/api/public/price-history', {id: '1', resolution: 'minutes'})
+Settle.run(process.env.SETTLE_DBAPI, '/api/public/price-history', {id: '1', resolution: 'minutes'})
 .then((result) => {
-  Tester(result)
+  console.log('Price history')
 })
 
 // Get token info, bitcoin
-Settle(process.env.SETTLE_DBAPI, '/api/public/info', {id: '1'})
+Settle.run(process.env.SETTLE_DBAPI, '/api/public/info', {id: '1'})
 .then((result) => {
-  Tester(result)
+  console.log('Info')
 })
