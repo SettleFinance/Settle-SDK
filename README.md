@@ -12,7 +12,7 @@ You need to register an app in settle in order to use the API. Head over to http
 
 ![Alt text](/Images/app-permission.png?raw=true)
 
-Set an app name and grab the automatically generated API keys. Update your .env folder so that SETTLE_API_KEY and SETTLE_API_SECRET reflect your keys.
+Set an app name and grab the automatically generated API keys. Update your .env file so that SETTLE_API_KEY and SETTLE_API_SECRET reflect your keys.
 
 ```
 SETTLE_API_KEY    = "API KEY HERE"
@@ -32,3 +32,9 @@ In your developer tools, https://settle.finance/app/developer-tools, click the i
 
 ### Return ticker information about Bitcoin
 Settle.run('https://dbapi.settle.finance', '/api/public/ticker', {id: '1'})
+
+### Return a users holdings with a list of trades for each asset
+Settle.run('https://jsapi.settle.finance', '/api/public/PortfolioTracker/HoldingsWithTrades', { user_id })
+
+### Return a list of users who installed my app
+Settle.run('https://jsapi.settle.finance', '/api/app/Users', {})
