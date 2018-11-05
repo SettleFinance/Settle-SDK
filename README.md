@@ -26,7 +26,7 @@ You can now access the Settle SDK!
 ### Testing user specific endpoints
 #### You can access the price feed API, but to access a users portfolio they need to install your app and opt into providing their data to you.
 
-In your developer tools, https://settle.finance/app/developer-tools, click the install button to try opting into your app before it's available in the app store.
+In your developer tools, https://settle.finance/app/developer-tools, select "portfolio" in data access permissions and click the install button to try opting into your app before it's available in the app store.
 
 ## Examples
 
