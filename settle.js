@@ -2,6 +2,8 @@ require('dotenv').config()
 const axios = require('axios')
 const crypto = require('crypto')
 
+const AuthSecurity = require('./Security/AuthSecurity')
+
 var Settle = {
   run: function Run(api, endpoint, params = {}){
     return new Promise(async (resolve, reject) => {
@@ -35,6 +37,9 @@ var Settle = {
         reject(error.response ? error.response.data : error)
       }
     })
+  },
+  exchangeTokenForGuid: function ExchangeTokenForGuid(token) {
+    return AuthSecurity.GetGuidFromIdentityProof(token);
   }
 }
 
