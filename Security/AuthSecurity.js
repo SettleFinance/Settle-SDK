@@ -8,8 +8,12 @@ var AuthSecurity = {
     audience = authHelper.GetAudience();
     subject = authHelper.GetSubject();
 
-    if(authHelper.GetAudiences().indexOf(audience) <= -1) { //audience must be whitelisted
-      throw "Audience (" + audience + ") is invalid or NOT whitelisted."
+    if(!audience) {
+      throw "Audience is NOT defined."
+    }
+
+    if(!subject) {
+      throw "Subject is NOT defined."
     }
 
     return new Promise(async (resolve, reject) => {
