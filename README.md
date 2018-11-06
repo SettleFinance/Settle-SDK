@@ -32,10 +32,16 @@ In your developer tools, https://settle.finance/app/developer-tools, select "por
 ## Examples
 
 #### Return ticker information about Bitcoin
+```
 Settle.PriceFeed.Ticker({id: '1'})
+```
 
 #### Return a users holdings with a list of trades for each asset
+```
 Settle.Portfolio.HoldingsWithTrades({ user_id })
+```
 
 #### Return a list of users who installed my app
+```
 Settle.App.Users()
+```
