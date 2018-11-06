@@ -12,25 +12,20 @@ If a user didnt install your app, the request will not work.
 
 /** Price Feed **/
 
-Settle.ticker()
-.then((result) => {
-  console.log(result)
-})
-
 // Get a ticker, bitcoin
-Settle.run(process.env.SETTLE_DBAPI, '/api/public/ticker', {id: '1'})
+Settle.PriceFeed.Ticker({id: '1'})
 .then((result) => {
-  console.log('Ticker')
+  console.log('ticker')
 })
 
 // Get price history, bitcoin
-Settle.run(process.env.SETTLE_DBAPI, '/api/public/price-history', {id: '1', resolution: 'minutes'})
+Settle.PriceFeed.PriceHistory({id: '1', resolution: 'minutes'})
 .then((result) => {
-  console.log('Price history')
+  console.log('price history')
 })
 
 // Get token info, bitcoin
-Settle.run(process.env.SETTLE_DBAPI, '/api/public/info', {id: '1'})
+Settle.PriceFeed.Info({id: '1'})
 .then((result) => {
-  console.log('Info')
+  console.log('token info')
 })

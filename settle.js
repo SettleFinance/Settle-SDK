@@ -1,49 +1,17 @@
 require('dotenv').config()
 const axios = require('axios')
 const crypto = require('crypto')
+const PriceFeed = require('./SDK/price-feed')
+const Portfolio = require('./SDK/portfolio')
+
+const AuthSecurity = require('./Security/AuthSecurity')
 
 var Settle = {
-  run: function Run(api, endpoint, params = {}){
-    return new Promise(async (resolve, reject) => {
-      try {
-        // get access token
-        var response = await axios.get(api + '/api/app/AccessToken', {
-          headers: {
-            'X-Api-Key': process.env.SETTLE_API_KEY
-          }
-        })
-
-        var accessToken = response.data.accessToken
-
-        // generate request signature
-        var signature = crypto.createHmac('sha256', process.env.SETTLE_API_SECRET)
-          .update(accessToken)
-          .digest('base64')
-
-        // make signed api request
-        response  = await axios.get(api + endpoint, {
-          params,
-          headers: {
-            'X-Api-Key': process.env.SETTLE_API_KEY,
-            'X-Access-Token': accessToken,
-            'X-Api-Signature': signature
-          }
-        })
-
-        resolve(response.data)
-      } catch(error) {
-        reject(error.response ? error.response.data : error)
-      }
-    })
+  exchangeTokenForGuid: function ExchangeTokenForGuid(token) {
+    return AuthSecurity.GetGuidFromIdentityProof(token);
   },
-  ticker: function ticker(){
-    return new Promise(async (resolve, reject) => {
-      this.run(process.env.SETTLE_DBAPI, '/api/public/ticker', {id: '1'})
-      .then((result)=>{
-        resolve(result)
-      })
-    })
-  }
+  PriceFeed: PriceFeed,
+  Portfolio: Portfolio
 }
 
 module.exports = Settle;
