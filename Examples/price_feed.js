@@ -12,6 +12,11 @@ If a user didnt install your app, the request will not work.
 
 /** Price Feed **/
 
+Settle.ticker()
+.then((result) => {
+  console.log(result)
+})
+
 // Get a ticker, bitcoin
 Settle.run(process.env.SETTLE_DBAPI, '/api/public/ticker', {id: '1'})
 .then((result) => {

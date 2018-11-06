@@ -35,6 +35,14 @@ var Settle = {
         reject(error.response ? error.response.data : error)
       }
     })
+  },
+  ticker: function ticker(){
+    return new Promise(async (resolve, reject) => {
+      this.run(process.env.SETTLE_DBAPI, '/api/public/ticker', {id: '1'})
+      .then((result)=>{
+        resolve(result)
+      })
+    })
   }
 }
 
