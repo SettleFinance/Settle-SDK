@@ -6,7 +6,9 @@ The Settle SDK abstracts using the price feed and settle API by wrapping authent
 Instead of authenticating and running requests yourself, use the settle object to run api functions.
 
 For example
+```
 Settle.PriceFeed.Ticker({token: 'Bitcoin'})
+```
 
 ## Important - Authentication
 You need to register an app in settle in order to use the API. Head over to https://settle.finance/app/developer-tools and join our developer program.
@@ -18,8 +20,6 @@ Set an app name and grab the automatically generated API keys. Update your .env 
 ```
 SETTLE_API_KEY    = "API KEY HERE"
 SETTLE_API_SECRET = "API SECRET HERE"
-SETTLE_JSAPI      = "https://jsapi.settle.finance"
-SETTLE_DBAPI      = "https://dbapi.settle.finance"
 ```
 
 You can now access the Settle SDK!
