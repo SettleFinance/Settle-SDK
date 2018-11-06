@@ -3,9 +3,10 @@ The Settle SDK abstracts using the price feed and settle API by wrapping authent
 
 
 ## How it works
-Instead of authenticating and running requests yourself, use Settle.run and pass in 3 parameters:
+Instead of authenticating and running requests yourself, use the settle object to run api functions.
 
-Settle.run(< API >, < Endpoint >, < Params >)
+For example
+Settle.PriceFeed.Ticker({token: 'Bitcoin'})
 
 ## Important - Authentication
 You need to register an app in settle in order to use the API. Head over to https://settle.finance/app/developer-tools and join our developer program.
@@ -31,10 +32,10 @@ In your developer tools, https://settle.finance/app/developer-tools, select "por
 ## Examples
 
 #### Return ticker information about Bitcoin
-Settle.run('https://dbapi.settle.finance', '/api/public/ticker', {id: '1'})
+Settle.PriceFeed.Ticker({id: '1'})
 
 #### Return a users holdings with a list of trades for each asset
-Settle.run('https://jsapi.settle.finance', '/api/public/PortfolioTracker/HoldingsWithTrades', { user_id })
+Settle.Portfolio.HoldingsWithTrades({ user_id })
 
 #### Return a list of users who installed my app
-Settle.run('https://jsapi.settle.finance', '/api/app/Users', {})
+Settle.App.Users()
