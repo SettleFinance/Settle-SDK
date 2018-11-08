@@ -7,8 +7,7 @@ function GetAudience() {
 exports.GetAudience = GetAudience;
 
 function GetSubject() {
-  return (!process.env.SCOPE_ENV || process.env.SCOPE_ENV === 'development') ?
-    authConstants.AudienceDev : authConstants.AudienceProd;
+  return authConstants.AudienceProd;
 }
 exports.GetSubject = GetSubject;
 
