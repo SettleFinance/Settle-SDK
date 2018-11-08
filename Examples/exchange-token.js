@@ -11,7 +11,7 @@ Make sure your .env file reflects your keys to make authenticated requests.
 /** Exchange Token **/
 
 // The token is passed as a get param (?user_id) into your app, along with the app mode (?mode)
-var token = '';
+var token = ``;
 
 // Convert a users token to a GUID to make requests for their data
 Settle.exchangeTokenForGuid(token)
