@@ -13,7 +13,7 @@ Settle.PriceFeed.Ticker({token: 'Bitcoin'})
 ## Important - Authentication
 You need to register an app in settle in order to use the API. Head over to http://test.settle.finance/app/developer-tools and join our developer program.
 
-![Alt text](/Images/app-permission.png?raw=true)
+![Alt text](https://github.com/SettleFinance/Settle-SDK/raw/master/Images/app-permission.png?raw=true)
 
 Set an app name and grab the automatically generated API keys. Update your .env file so that SETTLE_API_KEY and SETTLE_API_SECRET reflect your keys.
 
