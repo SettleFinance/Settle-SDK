@@ -2,6 +2,7 @@
 The Settle SDK abstracts using the price feed and settle API by wrapping authentication in a function.
 
 [Documentation](https://docs.settle.finance/)
+
 [Support channel](https://discord.gg/9C9NYVc)
 
 ## How it works
