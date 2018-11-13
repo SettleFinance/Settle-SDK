@@ -5,6 +5,10 @@ The Settle SDK abstracts using the price feed and settle API by wrapping authent
 
 [Support channel](https://discord.gg/9C9NYVc)
 
+```
+npm install settlesdk
+```
+
 ## How it works
 Instead of authenticating and running requests yourself, use the settle object to run api functions.
 
