@@ -10,7 +10,7 @@ Make sure your .env file reflects your keys to make authenticated requests.
 
 /** App **/
 
-let quid = "785035bc-2b83-478f-9fa5-371b64b66e67"
+let guid = "785035bc-2b83-478f-9fa5-371b64b66e67"
 
 
 // Return a list of users who installed your app
