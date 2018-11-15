@@ -1,7 +1,7 @@
 require('dotenv').config()
 const Runner = require('./runner')
 
-var api = "http://settlejsapi-staging.us-west-1.elasticbeanstalk.com";
+var api = "https://jsapi.settle.finance";
 var PriceFeed = {
   Summary: function (params = {}){
     return Runner(api, '/api/public/PortfolioTracker/Summary', params)
