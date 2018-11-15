@@ -54,6 +54,11 @@ Settle.exchangeTokenForGuid(token)
 Settle.PriceFeed.Ticker({id: '1'})
 ```
 
+#### Send a notification to a user
+```
+Settle.App.SendNotification({guid: guid})
+```
+
 #### Return a users holdings with a list of trades for each asset
 ```
 Settle.Portfolio.HoldingsWithTrades({ user_id })

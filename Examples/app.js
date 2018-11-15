@@ -10,7 +10,7 @@ Make sure your .env file reflects your keys to make authenticated requests.
 
 /** App **/
 
-let guid = "785035bc-2b83-478f-9fa5-371b64b66e67"
+let guid = "05c5bd17-ca24-42ac-bd97-c4d13c4c4f8a"
 
 
 // Return a list of users who installed your app
@@ -22,5 +22,3 @@ Settle.App.Users()
 Settle.App.SendNotification({guid: guid})
 .then(res => console.log(res))
 .catch(e => console.log(e))
-
-
