@@ -1,7 +1,8 @@
 require('dotenv').config()
 const Runner = require('./runner')
 
-var api = "https://jsapi.settle.finance";
+var api = process.env.SCOPE_ENV === "development" ? "http://localhost:3005" : "https://jsapi.settle.finance";
+
 var PriceFeed = {
   Summary: function (params = {}){
     return Runner(api, '/api/public/PortfolioTracker/Summary', params)

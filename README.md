@@ -5,6 +5,11 @@ The Settle SDK abstracts using the price feed and settle API by wrapping authent
 
 [Support channel](https://discord.gg/9C9NYVc)
 
+
+```
+npm install settlesdk
+```
+
 ## How it works
 Instead of authenticating and running requests yourself, use the settle object to run api functions.
 
@@ -14,7 +19,7 @@ Settle.PriceFeed.Ticker({token: 'Bitcoin'})
 ```
 
 ## Important - Authentication
-You need to register an app in settle in order to use the API. Head over to http://test.settle.finance/app/developer-tools and join our developer program.
+You need to register an app in settle in order to use the API. Head over to https://settle.finance/app/developer-tools and join our developer program.
 
 ![Alt text](https://github.com/SettleFinance/Settle-SDK/raw/master/Images/app-permission.png?raw=true)
 
@@ -30,7 +35,7 @@ You can now access the Settle SDK!
 ### Testing user specific endpoints
 #### You can access the price feed API, but to access a users portfolio they need to install your app and opt into providing their data to you.
 
-In your developer tools, http://test.settle.finance/app/developer-tools, select "portfolio" in data access permissions and click the install button to try opting into your app before it's available in the app store.
+In your developer tools, https://settle.finance/app/developer-tools, select "portfolio" in data access permissions and click the install button to try opting into your app before it's available in the app store.
 
 ## [API reference ](https://docs.settle.finance/display/SP/API+Documentation)
 
