@@ -17,40 +17,46 @@ If a user didnt install your app, the request will not work.
 
 /** Portfolio **/
 
-var user_id = '1736-4642-5635';
+var guid = '785035bc-2b83-478f-9fa5-371b64b66e67';
+
 
 // Return a summary of a users portfolio
-Settle.Portfolio.Summary({user_id})
+Settle.Portfolio.Summary({guid})
 .then((result) => {
   console.log('summary')
 })
-
+.catch(e => console.log(e))
 // Return a users holdings and total portfolio value
-Settle.Portfolio.Holdings({user_id})
+Settle.Portfolio.Holdings({guid})
 .then((result) => {
   console.log('holdings')
 })
+.catch(e => console.log(e))
 
 // Return a users holdings with a list of trades for each asset
-Settle.Portfolio.HoldingsWithTrades({user_id})
+Settle.Portfolio.HoldingsWithTrades({guid})
 .then((result) => {
   console.log('holdings with trades')
 })
+.catch(e => console.log(e))
 
 // Return a users trades
-Settle.Portfolio.Trades({user_id})
+Settle.Portfolio.Trades({guid})
 .then((result) => {
   console.log('trades')
 })
+.catch(e => console.log(e))
 
 // Return a users exchanges
-Settle.Portfolio.Exchanges({user_id})
+Settle.Portfolio.Exchanges({guid})
 .then((result) => {
   console.log('exchanges')
 })
+.catch(e => console.log(e))
 
 // Return a users 30 day balance history (for graphing on a chart)
-Settle.Portfolio.BalanceHistory({user_id})
+Settle.Portfolio.BalanceHistory({guid})
 .then((result) => {
   console.log('balance history')
 })
+.catch(e => console.log(e))
