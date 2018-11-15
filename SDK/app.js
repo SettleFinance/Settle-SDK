@@ -12,6 +12,10 @@ var App = {
   },
   SetNotification: function (params = {}) {
     return Runner(api, '/api/app/SetNotification', params)
+  },
+  ClearNotification: function (params = {}) {
+    params = {...params, notification_count: 0}
+    return Runner(api, '/api/app/SetNotification', params)
   }
 }
 
