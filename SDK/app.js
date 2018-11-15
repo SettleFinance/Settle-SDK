@@ -9,6 +9,9 @@ var App = {
   },
   SendNotification: function (params = {}) {
     return Runner(api, '/api/app/SendNotification', params)
+  },
+  SetNotification: function (params = {}) {
+    return Runner(api, '/api/app/SetNotification', params)
   }
 }
 

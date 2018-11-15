@@ -23,4 +23,6 @@ Settle.App.SendNotification({guid: guid})
 .then(res => console.log(res))
 .catch(e => console.log(e))
 
-
+Settle.App.SetNotification({guid: guid, notification_count: 100})
+.then(res => console.log(res))
+.catch(e => console.log(e))
