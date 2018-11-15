@@ -17,7 +17,7 @@ If a user didnt install your app, the request will not work.
 
 /** Portfolio **/
 
-var guid = '785035bc-2b83-478f-9fa5-371b64b66e67';
+var guid = '05c5bd17-ca24-42ac-bd97-c4d13c4c4f8a';
 
 
 // Return a summary of a users portfolio
