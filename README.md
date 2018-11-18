@@ -68,3 +68,8 @@ Settle.Portfolio.HoldingsWithTrades({ user_id })
 ```
 Settle.App.Users()
 ```
+
+#### Send an event message to 1v1 chat or chat hub
+```
+Settle.Chat.sendEvent({ chatId, message, guid })
+```
