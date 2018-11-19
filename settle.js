@@ -5,8 +5,9 @@ const PriceFeed = require('./SDK/price-feed')
 const Portfolio = require('./SDK/portfolio')
 const App = require('./SDK/app')
 const User = require('./SDK/user')
+const Chat = require('./SDK/chat');
 
-const AuthSecurity = require('./Security/AuthSecurity')
+const AuthSecurity = require('./Security/AuthSecurity');
 
 var Settle = {
   exchangeTokenForGuid: function ExchangeTokenForGuid(token) {
@@ -15,7 +16,8 @@ var Settle = {
   PriceFeed: PriceFeed,
   Portfolio: Portfolio,
   App: App,
-  User: User
-}
+  User: User,
+  Chat
+};
 
 module.exports = Settle;
