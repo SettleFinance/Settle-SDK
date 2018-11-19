@@ -54,6 +54,11 @@ Settle.exchangeTokenForGuid(token)
 Settle.PriceFeed.Ticker({id: '1'})
 ```
 
+#### Send an custom hub event
+```
+Settle.Chat.sendEvent({ chatId, message })
+```
+
 #### Send a notification to a user
 ```
 Settle.App.SendNotification({guid: guid})
@@ -67,9 +72,4 @@ Settle.Portfolio.HoldingsWithTrades({ user_id })
 #### Return a list of users who installed my app
 ```
 Settle.App.Users()
-```
-
-#### Send an event message to 1v1 chat or chat hub
-```
-Settle.Chat.sendEvent({ chatId, message })
 ```

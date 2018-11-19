@@ -19,10 +19,10 @@ const Settle = require('../settle');
 
 /** Chat Event **/
 
-/* send an event message from you app to 1v1 chat or chat hub */
+/* send a custom hub event */
 Settle
     .Chat
-    .sendEvent({ chatId: 'f4517312-704b-5e28-bb2e-53dfabcdefgh', message: 'Scott moved into bitcoin' })
+    .sendEvent({ chatId: 'b92a1326-80cd-4e44-8980-27ba853e23bd', message: 'Scott moved into bitcoin' })
     .then((eventData) => {
         console.log(eventData)
     })
