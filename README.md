@@ -54,6 +54,11 @@ Settle.exchangeTokenForGuid(token)
 Settle.PriceFeed.Ticker({id: '1'})
 ```
 
+#### Convert a GUID to a username
+```
+Settle.User.GuidToUsername({guid: guid})
+```
+
 #### Send an custom hub event
 ```
 Settle.Chat.sendEvent({ chatId, message })
