@@ -15,7 +15,10 @@ Instead of authenticating and running requests yourself, use the settle object t
 
 For example
 ```
+const Settle = require('settlesdk')
 Settle.PriceFeed.Ticker({token: 'Bitcoin'})
+
+console.log(Settle)
 ```
 
 ## Important - Authentication

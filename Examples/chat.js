@@ -22,7 +22,7 @@ const Settle = require('../settle');
 /* send a custom hub event */
 Settle
     .Chat
-    .sendEvent({ chatId: 'b92a1326-80cd-4e44-8980-27ba853e23bd', message: 'Scott moved into bitcoin' })
+    .sendEvent({ chatId: '9181ea27-998b-4990-95ba-86706230fbd5', message: 'Scott moved into bitcoin' })
     .then((eventData) => {
         console.log(eventData)
     })
