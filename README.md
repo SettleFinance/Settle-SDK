@@ -1,7 +1,7 @@
 ## Settle SDK
 The Settle SDK abstracts using the price feed and settle API by wrapping authentication in a function.
 
-[Documentation](https://docs.settle.finance/)
+[Documentation](https://settle.finance/create-an-app/)
 
 [Support channel](https://discord.gg/9C9NYVc)
 
@@ -40,7 +40,7 @@ You can now access the Settle SDK!
 
 In your developer tools, https://settle.finance/app/developer-tools, select "portfolio" in data access permissions and click the install button to try opting into your app before it's available in the app store.
 
-## [API reference ](https://docs.settle.finance/display/SP/API+Documentation)
+## [API reference ](https://settle.finance/api/)
 
 ## User specific apps
 When your app or chat plugin is loaded inside of settle, we will pass a user_id get param (?user_id) along with the app mode (?mode).
