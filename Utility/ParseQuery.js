@@ -87,7 +87,7 @@ function ParseQuery(query) {
         command = Filter(command)
       break;
       case 'insert':
-       UpdateOrInsert(command)
+        UpdateOrInsert(command)
       break;
       case 'limit':
         PositiveInteger(command)
