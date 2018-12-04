@@ -21,7 +21,7 @@ function Data(table) {
   }
 
   This.Insert = (value) => {
-    This.dbquery.push(['insert'], value)
+    This.dbquery.push(['insert', value])
     return This
   }
 
@@ -41,7 +41,7 @@ function Data(table) {
   }
 
   This.Update = (value) => {
-    This.dbquery.push(['update'], value)
+    This.dbquery.push(['update', value])
     return This
   }
 
