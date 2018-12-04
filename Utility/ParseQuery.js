@@ -41,13 +41,13 @@ function UpdateOrInsert(command) {
       if(!_.isObject(item)) {
         throw command.name + ' value must be an object or array of objects'
       }
-      if("id" in item && (!_.isString(item.id) && !Number.isInteger(command.id))) {
-        throw command.name + ' index must be a string or integer'
+      if("id" in item && (!_.isString(item.id) && !Number.isInteger(item.id))) {
+        throw command.name + ' id must be a string or integer'
       }
     })
   } else {
     if("id" in command.value && (!_.isString(command.value.id) && !Number.isInteger(command.value.id))) {
-      throw command.name + ' index must be a string or integer'
+      throw command.name + ' id must be a string or integer'
     }
   }
 }
