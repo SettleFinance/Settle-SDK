@@ -79,7 +79,7 @@ function Pluck(command) {
   }
   _.each(command.value, (value) => {
     if(!_.isString(value)) {
-      throw command.name + ' accepts one or more string arguments
+      throw command.name + ' accepts one or more string arguments'
     }
   })
 }
