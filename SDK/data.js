@@ -40,7 +40,7 @@ function Data(table) {
     return This
   }
 
-  This.Pluck = () => {
+  This.Pluck = function() {
     This.dbquery.push(['pluck', [...arguments]])
     return This
   }
