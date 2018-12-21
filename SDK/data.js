@@ -15,6 +15,11 @@ function Data(table) {
     return This
   }
 
+  This.Drop = () => {
+    This.dbquery.push(['drop'])
+    return This
+  }
+
   This.Filter = (value) => {
     This.dbquery.push(['filter', value])
     return This
@@ -32,6 +37,11 @@ function Data(table) {
 
   This.OrderBy = (value) => {
     This.dbquery.push(['orderBy', [value.index, value.direction]])
+    return This
+  }
+
+  This.Pluck = () => {
+    This.dbquery.push(['pluck', [...arguments]])
     return This
   }
 

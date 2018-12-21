@@ -73,6 +73,23 @@ function OrderBy(command) {
   }
 }
 
+function Pluck(command) {
+  if(!_.isArray(command.value)) {
+    throw command.name + ' accepts one or more string arguments'
+  }
+  _.each(command.value, (value) => {
+    if(!_.isString(value)) {
+      throw command.name + ' accepts one or more string arguments
+    }
+  })
+}
+
+function Sum(command) {
+  if(!_.isString(command.value) && !Number.isInteger(command.value)) {
+    throw command.name + ' value must be a string or integer'
+  }
+}
+
 function ParseQuery(query) {
   return _.map(query, (command) => {
     command = {
@@ -82,6 +99,8 @@ function ParseQuery(query) {
 
     switch(command.name) {
       case 'delete':
+      break;
+      case 'drop':
       break;
       case 'filter':
         command = Filter(command)
@@ -97,8 +116,14 @@ function ParseQuery(query) {
         command.direction = command.value[1]
         OrderBy(command)
       break;
+      case 'pluck':
+        Pluck(command)
+      break;
       case 'skip':
         PositiveInteger(command)
+      break;
+      case 'sum':
+        Sum(command)
       break;
       case 'update':
         UpdateOrInsert(command)
