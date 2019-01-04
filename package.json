@@ -1,6 +1,6 @@
 {
   "name": "settlesdk",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "",
   "main": "settle.js",
   "scripts": {
@@ -11,6 +11,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^6.1.0",
-    "jsonwebtoken": "^8.3.0"
+    "jsep": "^0.3.4",
+    "jsonwebtoken": "^8.3.0",
+    "underscore": "^1.9.1"
   }
 }
