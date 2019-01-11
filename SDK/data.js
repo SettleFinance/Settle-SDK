@@ -2,7 +2,7 @@ require('dotenv').config()
 const Runner = require('./runner')
 const ParseQuery = require('../Utility/ParseQuery')
 
-var api = process.env.SCOPE_ENV === "development" ? "http://localhost:3005" : "https://data.settle.finance";
+var api = process.env.SCOPE_ENV === "development" ? "http://localhost:3005" : "https://jsapi.settle.finance";
 
 function Data(table) {
   var This = this
