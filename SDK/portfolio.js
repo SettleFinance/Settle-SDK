@@ -21,6 +21,12 @@ var PriceFeed = {
   },
   BalanceHistory: function (params = {}){
     return Runner(api, '/api/public/PortfolioTracker/BalanceHistory', params)
+  },
+  Watchlists: function (params = {}){
+    return Runner(api, '/api/public/PortfolioTracker/GetWatchlists', params)
+  },
+  WatchlistTokens: function (params = {}){
+    return Runner(api, '/api/public/PortfolioTracker/WatchlistTokens', params)
   }
 }
 
