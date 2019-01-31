@@ -73,3 +73,8 @@ Settle.App.Users()
 ```
 Settle.Chat.sendEvent({ chatId, message })
 ```
+
+#### Returns hub details
+```
+Settle.Chat.hubDetails({ chatLink })
+```
