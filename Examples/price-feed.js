@@ -16,6 +16,7 @@ If a user didnt install your app, the request will not work.
 Settle.PriceFeed.Ticker({id: '1'})
 .then((result) => {
   console.log('ticker')
+  console.log(result)
 })
 
 // Get price history, bitcoin
