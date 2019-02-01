@@ -7,6 +7,7 @@ const App = require('./SDK/app')
 const User = require('./SDK/user')
 const Chat = require('./SDK/chat')
 const Data = require('./SDK/data')
+const Watchlist = require('./SDK/watchlist')
 
 const AuthSecurity = require('./Security/AuthSecurity');
 
@@ -19,7 +20,8 @@ var Settle = {
   App,
   User,
   Chat,
-  Data
+  Data,
+  Watchlist
 };
 
 module.exports = Settle;
