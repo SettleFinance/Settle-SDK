@@ -27,3 +27,23 @@ Settle
         console.log(eventData)
     })
     .catch((error) => console.log(error));
+
+
+/** Hub details **/
+
+/* get hub details */
+Settle
+    .Chat
+    .hubDetails({ chatLink: 'zkzx2b3g1jpwv7uc6' })
+    .then((hubData) => {
+        console.log(hubData)
+    })
+    .catch((error) => console.log(error));
+
+Settle
+    .Chat
+    .hubDetails({ chatLink: 'trading' })
+    .then((hubData) => {
+        console.log(hubData)
+    })
+    .catch((error) => console.log(error));
