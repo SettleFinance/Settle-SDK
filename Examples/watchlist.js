@@ -10,8 +10,8 @@ const Settle = require('../settle')
 
 /** Watchlist **/
 
-let guid = "600c7844-a5c8-4ca1-b24b-5aa3a563cafc"
-let watchlist_id = "c4d22704-7adb-42fb-bc39-24247996b7a3"
+let guid = "c763f61b-5a4d-42f5-9d26-ef04f420f556"
+let watchlist_id = "8addc02f-9080-4082-bead-7e7c72617149"
 
 
 // Return a list of users watchlist
